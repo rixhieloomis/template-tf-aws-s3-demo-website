@@ -103,3 +103,8 @@ resource "aws_s3_object" "copy_content" {
   )
   depends_on = [aws_s3_bucket.s3_bucket[0]]
 }
+
+
+module "website_s3_bucket" {
+  source = "https://github.com/stackguardian/deployments"
+}
